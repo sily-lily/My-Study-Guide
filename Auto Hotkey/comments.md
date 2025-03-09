@@ -3,6 +3,8 @@ Useful for describing what certain parts of your code does, that's about it.
 
 Since this is a really basic part, I won't be going too in-depth about anything, just some examples and using it correctly.
 
+---
+
 ### Using Proper Syntax
 Here's an example on what you **can do**.
 ```ahk
