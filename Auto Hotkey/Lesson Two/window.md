@@ -9,6 +9,10 @@ If you're confused, like I was, about `WinGet` subcommands, scroll **all the way
 ---
 
 ### Learning More... 🔍
+- **`Run`**: Opening a Window / program of your choice.
+```ahk
+Run "Notepad" ; Open the Notepad program
+```
 - **`WinActivate`**: Brings a specific Window up and focuses on it.
 ```ahk
 if (WinExist("ahk_class Notepad")) {
