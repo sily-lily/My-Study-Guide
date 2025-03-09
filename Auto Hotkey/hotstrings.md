@@ -33,7 +33,7 @@ Here are some common hotstring options for you to use:
 
 ---
 
-# Option Combination
+### Option Combination
 Are you wanting to complicate things even more? Let me introduce you into combining options.
 - Combining options allows you to save lines, time, and your energy, allowing for peak laziness!
 
