@@ -46,7 +46,7 @@ This is basically the idea that you can change the contents of existing variable
 Here's a fairly basic example:
 ```ahk
 myVariable := "Just a lovely string" ; Defining myVariable to a string.
-myVariable := "This is an evil string! We hacked it." ; Modifying the "Just a lovely string" string.
+myVariable := "This is an evil string! We hacked it." ; Re-defining the "Just a lovely string" string.
 
 MsgBox, % myVariable ; Displays "This is an evil string! We hacked it."
 ```
