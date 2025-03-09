@@ -14,7 +14,7 @@ Stop reading complicated docs and start reading well formatted, well-put togethe
 > [!WARNING]
 > Try not to skip any lessons! Everything is ordered from **least** to **most** skill. Skipping lessons can break your learning process, and lessons will get progressively complex.
 
-### Learning Guide 📘
+## Learning Guide 📘
 If you follow this learning guide and **practice as you're reading**, this knowledge will stick to you like gorilla glue.
 - Review all lessons **as many times as it takes** for the knowledge to **truly stick with you**, and you'll never have to rely on AI ever again!
 
@@ -24,3 +24,6 @@ If you follow this learning guide and **practice as you're reading**, this knowl
 3. Getting the hang of different types of statements. Learn about **if statements** and **for**/**while** loops. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/Lesson%20One/statements.md#learning-various-statements-in-ahk)
 4. Learning the basics of basic and multi-keyed keybinds. Trigger events when a key is pressed with ease. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/Lesson%20One/hotkeys.md#learning-about-hotkeys)
 5. Understand the complex concept of hotstrings and the several methods that go along with it. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/Lesson%20One/hotstrings.md#learning-text-expansion-using-ahk)
+
+### Part 2: Computer & File Management
+1. Understanding the idea of **keyboard** and **mouse** management. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/Lesson%20Two/keyboard.md#controlling-your-keyboard-and-mouse-using-ahk)
