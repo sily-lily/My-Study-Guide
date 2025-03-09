@@ -6,6 +6,8 @@ Thankfully, Auto Hotkey spares our souls by making things **`dynamically typed`*
 
 All you have to do to assign something to a variable is give it a name and a value.
 
+---
+
 ### Variable Types 😼
 Different ways a variable can be assigned.
 
@@ -22,6 +24,8 @@ They made this easy for you so you don't need to worry about each type, you just
 > Call a Key by specifically doing: **myDict["name"]**, where "**name**" is defined in your dictionary, and **myDict** is your dictionary variable.
 - **`Objects`**: Same syntax as a dictionary, just used different
 > Call a part of your dictionary by just doing: **myObject.name**, which in our case would be "**Suno**"
+
+---
 
 ### Special Variables 👽
 Auto Hotkey includes like a wide range of built-in "**global**" variables that you can use!
@@ -78,6 +82,8 @@ Auto Hotkey includes like a wide range of built-in "**global**" variables that y
   - **`A_Quarter`**: The current quarter of the year.
   - **`A_SecondsSinceStart`**: The number of secodns since the script was launched.
 </details>
+
+---
 
 ### Dynamic Variables 😜
 This is basically the idea that you can change the contents of existing variables. Pretty cool, right?
