@@ -1,4 +1,4 @@
-# Variable Using in AHK
+# Using Variables in AHK
 Thankfully, Auto Hotkey spares our souls by making things **`dynamically typed`**, if you **don't know what this means**, don't worry about it. It's not important when learning how to code in AHK.
 
 > [!NOTE]
