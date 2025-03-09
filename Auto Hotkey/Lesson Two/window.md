@@ -4,7 +4,7 @@ It's about now you realize things are increasing in difficulty heavily. And that
 Anyway, let's go over how you can manage different windows and control them.
 - Expect **every lesson** to be more and more in-depth, as they get more complicated. Your peanut brain is going to have to figure it out.
 
-If you're confused, like I was, about `WinGet` subcommands, scroll **all the way down**! I explain them in-detail and help you understand them.
+If you're confused, like I was, about `WinGet` subcommands, I'm sorry, I am too buddy.
 
 ---
 
@@ -72,65 +72,3 @@ if (WinExist("ahk_class Notepad")) {
   WinRestore
 }
 ```
-
----
-
-### Subcommands are Confusing 😭
-If you're like me, and don't understand `WinGet` subcommands, you're in luck. Here's a special extra session dedicated to teaching you every `WinGet` subcommand.
-- I used to be absolutely clueless on this section up until now. _You're welcome_.
-
-Here's a list of the most common ones, which you're probably gonna end up using like 80% of them at some point.
-
-- **`Title`**: Gets the title of a specific Window.
-```ahk
-WinGet, windowTitle, Title, "ahk_class Notepad"
-MsgBox, % "The title of the window is: " . %windowTitle
-```
-- **`Class`**: Gets the class name of a Window.
-```ahk
-WinGet, windowClass, Class, "ahk_class Notepad"
-MsgBox, % "The Window's class is: " . %windowClass%
-```
-- **`ID`**: Find the process ID of the program.
-```ahk
-WinGet, windowID, ID, "ahk_class Notepad"
-MsgBox, % "The Window's PID is: " . %windowID%
-```
-- **`ProcessName`**: Gets the class process name of a Window, similar-ish to ID.
-```ahk
-WinGet, processName, ProcessName, "ahk_class Notepad"
-MsgBox, % "The Window's process name is: " . %processName%
-```
-- **`List`**: Makes a list of all open Windows and their IDs.
-```ahk
-WinGet, idList, List
-Loop, %isList%
-{
-  thisID := idList%A_Index%
-  WinGetTitle, title, ahkID %thisID%
-  MsgBox, % "Window ID of " . %title% . " is: " . %thisID%
-}
-```
-- **`Count`**: Gets the count of every Window open.
-```ahk
-WinGet, windowCount, Count
-MsgBox, % "There are " . %windowCount% . " open Windows."
-```
-- **`Style`**: Shows the Window style of the chosen Window.
-```ahk
-WinGet, windowStyle, Style, "ahk_class Notepad"
-MsgBox, % "The Window's style is " . %windowStyle%
-```
-- **`ExStyle`**: Retrieves the extended Window style of the chosen Window.
-```ahk
-WinGet, windowExStyle, ExStyle, "ahk_class Notepad"
-MsgBox, % "The extended Window style is: " . %windowExStyle%
-```
-- **`Pos`**: Gets the position and size of a Window.
-```ahk
-WinGetPos, X, Y, Width, Height, "ahk_class Notepad"
-MsgBox, % "Sizes: (X:" . Width . ", Y:" . Height . "), Position: (X:" . X . ", Y:" . Y . ")"
-```
-
-Hopefully that makes sense. I broke down and showed you an example of **every one of the** most common `WinGet` choices.
-- If I missed one, I'm sorry..
