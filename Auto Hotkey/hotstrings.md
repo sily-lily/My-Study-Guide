@@ -33,6 +33,18 @@ Here are some common hotstring options for you to use:
 
 ---
 
+# Option Combination
+Are you wanting to complicate things even more? Let me introduce you into combining options.
+- Combining options allows you to save lines, time, and your energy, allowing for peak laziness!
+
+Let me show you an example of what I mean:
+```ahk
+:*:ez::well played, i had fun!      ; Converts immediately after typing "z"
+:*?:ez::thanks for playing with me! ; Stuff from the first sample + it'll form in full sentences!
+```
+
+---
+
 ### Some Hotstring Examples
 
 Still don't understand? You can review what you've learnt from the provided examples given below:
