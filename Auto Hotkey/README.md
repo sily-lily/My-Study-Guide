@@ -22,3 +22,4 @@ If you follow this learning guide and **practice as you're reading**, this knowl
 1. Learn and understand the idea of putting explanatory messages in your code. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/comments.md)
 2. Understand and learn **how to create** variables, **every type of variable**, and **what they mean**. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/variables.md)
 3. Getting the hang of different types of statements. Learn about **if statements** and **for**/**while** loops. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/statements.md)
+4. Learning the basics of basic and multi-keyed keybinds. Trigger events when a key is pressed with ease. [Open lesson](https://github.com/mr-suno/My-Study-Guide/blob/main/Auto%20Hotkey/hotkeys.md)
