@@ -58,7 +58,7 @@ return
 
 ^q::
     MouseGetPos, mouseX, mouseY
-    MsgBox, % "Mouse @ Position X:" . mouseX . ", Y:" . mouseY ; SHOW MOUSE POSITION ;
+    MsgBox, % "Mouse @ Position X:" . mouseX . ", Y:" . mouseY
 return
 
 ^w::
@@ -67,8 +67,8 @@ return
 
 ; <---> <---> <---> <---> <---> <---> <---> <---> <---> <---> ;
 
-; General Pokemon Triggers ;
-; Shift + Q, Shift + W     ;
+; General Pokemon Triggers        ;
+; Shift + Q, Shift + E, Shift + R ;
 
 +q:: 
     lClickMouse(selections.no)
@@ -77,11 +77,11 @@ return
     lClickMouse(selections.yes) ; DECLINE LEARNING MOVE ;
 return
 
-+w::
++e::
     lClickMouse(selections.no) ; DECLINE SWITCHING POKEMON ;
 return
 
-+e::
++r::
     lClickMouse(selections.yes) ; ACCEPT CONFIMATION CHOICE ;
 return
 
