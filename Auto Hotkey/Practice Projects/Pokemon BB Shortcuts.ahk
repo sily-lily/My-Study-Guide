@@ -58,7 +58,7 @@ return
 
 ^q::
     MouseGetPos, mouseX, mouseY
-    MsgBox, % "Mouse @ Position X:" . mouseX . ", Y:" . mouseY
+    MsgBox, % "Mouse @ Position X:" . mouseX . ", Y:" . mouseY ; SHOW MOUSE POSITION ;
 return
 
 ^w::
