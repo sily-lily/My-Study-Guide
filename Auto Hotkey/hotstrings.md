@@ -20,7 +20,6 @@ When you type "**btw**" followed by a space, tab, or Enter, it will automaticall
 ---
 
 ### Hotstring Trigger Options 😉
-
 Usually, hotstrings are triggered by typing the sequence **followed by a terminated character** (e.g., space, tab, Enter).
 - Only real ones know you can customize the trigger behavior using **options**.
 
@@ -37,7 +36,6 @@ Here are some common hotstring options for you to use:
 ### Some Hotstring Examples
 
 Still don't understand? You can review what you've learnt from the provided examples given below:
-
 ```ahk
 :*:wtf::water the fish ; Using "*", we're telling it to convert immediately after we type "f".
 :?:so::soothing        ; Since we're using "?", words like "soul" will be turned into "soothingul".
