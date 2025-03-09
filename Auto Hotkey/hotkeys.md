@@ -6,6 +6,8 @@ If you don't know what a hotkey is, then let me explain quickly. Hotkeys are ess
 > [!NOTE]
 > Hotkeys **are case-sensitive**, meaning "**h**" and "**H**" are different keys! Make sure you're keeping this in mind.
 
+You use "**^**" for Control, similarly you'd use "**!**" for Alt.
+
 There are two different types of hotkeys in AHK: **Basic** and **Mutli-key**.
 
 ---
