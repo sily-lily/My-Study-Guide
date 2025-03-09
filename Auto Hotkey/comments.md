@@ -1,4 +1,4 @@
-### Using Comments in AHK
+# Using Comments in AHK
 Useful for describing what certain parts of your code does, that's about it.
 
 Since this is a really basic part, I won't be going too in-depth about anything, just some examples and using it correctly.
