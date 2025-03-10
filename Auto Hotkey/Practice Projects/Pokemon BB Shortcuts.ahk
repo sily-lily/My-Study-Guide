@@ -17,8 +17,34 @@ inSkiball := false
 
 ; General Functions ;
 
+colorExistsAndClick(color) {
+    #Persistent
+    SetTitleMatchMode, 2
+
+    colorToFind := color
+    tolerance := 0
+
+    xStart := 0
+    yStart := 0
+
+    xEnd := A_ScreenWidth
+    yEnd := A_ScreenHeight
+
+    PixelSearch, foundX, foundY, xStart, yStart, xEnd, yEnd, colorToFind, tolerance, Fast
+
+    if (ErrorLevel == 0) {
+        xylClickMouse(foundX, foundY)
+    } else {
+        MsgBox, % "Not found"
+    }
+}
+
 lClickMouse(object) {
     MouseClick, left, object.posX, object.posY
+}
+
+xylClickMouse(x, y) {
+    MouseClick, left, x, y
 }
 
 clickOnMove(chosenMove) {
@@ -31,9 +57,17 @@ clickOnMove(chosenMove) {
 }
 
 pressKey(key, duration) {
+    if (key == "W" || key == "A" || key == "S" || key == "D") {
+        Send, {SHIFT down}
+    }
+
     Send, {%key% down}
-    Sleep duration
+    Sleep, duration
     Send, {%key% up}
+
+    if (key == "W" || key == "A" || key == "S" || key == "D") {
+        Send, {SHIFT up}
+    }
 }
 
 openMap() {
@@ -49,10 +83,47 @@ openMap() {
     lClickMouse(interface.flyButton)
 }
 
+flyTo(area) {
+    global interface
+    global zones
+
+    openMap()
+
+    Sleep, 500
+    for key, value in zones {
+        if (InStr(key, area) || area == key) {
+            StringReplace, key, key, town, , All
+            StringReplace, key, key, city, , All
+
+            if (key == "mitis") {
+                lClickMouse(zones.mitisTown)
+            } else if (key == "cheshma") {
+                lClickMouse(zones.cheshmaTown)
+            } else if (key == "silvent") {
+                lClickMouse(zones.silventCity)
+            } else if (key == "brimber") {
+                lClickMouse(zones.brimberCity)
+            } else if (key == "lagoona") {
+                lClickMouse(zones.lagoonaLake)
+            } else if (key == "rosecove") {
+                lClickMouse(zones.rosecoveCity)
+            } else if (key == "cragonos") {
+                lClickMouse(zones.cragonosCliffs)
+            } else if (key == "anthian") {
+                lClickMouse(zones.anthianCity)
+            } else if (key == "aredia") {
+                lClickMouse(zones.arediaCity)
+            }
+        }
+    }
+
+    Sleep, 1000
+    lClickMouse(interface.confirm)
+}
+
 ; <---> <---> <---> <---> <---> <---> <---> <---> <---> <---> ;
 
 ; Playing Move Triggers ;
-; 1-5                   ;
 
 1::
     clickOnMove(movePos.heatWave) ; FIRST BATTLE MOVE SLOT ;
@@ -118,18 +189,14 @@ return
 ; Shift + 1, Shift + 2               ;
 
 +1::
-    openMap()
-    Sleep, 500
-
-    lClickMouse(zones.mitisTown)
-    Sleep, 500
+    flyTo("mitis")
 
     lClickMouse(interface.confirm) ; INSTANTLY HEAL POKEMON (REQUIRES "FLY") ;
     Sleep, 4500
 
-    pressKey("D", 1800)
-    pressKey("S", 1600)
-    pressKey("D", 1325)
+    pressKey("D", 1000)
+    pressKey("S", 900)
+    pressKey("D", 850)
 
     lClickMouse(npcs.healer)
     Sleep, 500
@@ -145,34 +212,7 @@ return
 
     result := Format("{:L}", userInput) ; AUTOMATICALLY FLY TO ANY CITY ;
 
-    openMap()
-
-    Sleep, 500
-    if (result == "mitis") {
-        lClickMouse(zones.mitisTown)
-    } else if (result == "cheshma") {
-        lClickMouse(zones.cheshmaTown)
-    } else if (result == "silvent") {
-        lClickMouse(zones.silventCity)
-    } else if (result == "brimber") {
-        lClickMouse(zones.brimberCity)
-    } else if (result == "lagoona") {
-        lClickMouse(zones.lagoonaLake)
-    } else if (result == "rosecove") {
-        lClickMouse(zones.rosecoveCity)
-    } else if (result == "cragonos") {
-        lClickMouse(zones.cragonosCliffs)
-    } else if (result == "anthian") {
-        lClickMouse(zones.anthianCity)
-    } else if (result == "aredia") {
-        lClickMouse(zones.arediaCity)
-    } else {
-        MsgBox, % "Area couldn't be found! Try somewhere that exists."
-        return
-    }
-
-    Sleep, 500
-    lClickMouse(interface.confirm)
+    flyTo(result)
 return
 
 ; <---> <---> <---> <---> <---> <---> <---> <---> <---> <---> ;
@@ -180,49 +220,11 @@ return
 ; Arcade Triggers      ;
 ; Shift + 3, Shift + 4 ;
 
-playSkiball() {
-    #Persistent
-    SetTitleMatchMode, 2
-
-    colorToFind := 0x62A44A
-    tolerance := 0
-
-    xStart := 0
-    yStart := 0
-
-    xEnd := A_ScreenWidth
-    yEnd := A_ScreenHeight
-
-    PixelSearch, foundX, foundY, xStart, yStart, xEnd, yEnd, colorToFind, tolerance, Fast
-
-    if (ErrorLevel == 0) {
-        found := false
-        surroundingOffsets := [[0, -1], [0, 1], [-1, 0], [1, 0]]
-
-        for index, offset in surroundingOffsets {
-            checkX := foundX + offset[1]
-            checkY := foundY + offset[2]
-            
-            PixelGetColor, surroundingColor, checkX, checkY, RGB
-            surroundingColorBGR := (surroundingColor & 0xFF) << 16 | (surroundingColor & 0xFF00) | (surroundingColor & 0xFF0000) >> 16
-            
-            if (surroundingColorBGR = colorToFind) {
-                found := true
-                break
-            }
-        }
-
-        if (found) {
-            MouseClick, left, foundX, foundY
-        }
-    }
-}
-
 +3::
     inSkiball := true
 
     while (inSkiball == true) {
-        playSkiball()
+        colorExistsAndClick(0x62A44A)
         Sleep, 7000
     
         localCount := 0
