@@ -1,5 +1,5 @@
 # Learning AHK Correctly 😏
-Do you want to stop being a stupid fuck? Yeah, me too. That's why I spent a long time writing out these guided notes so you don't have to!
+Do you want to stop being a stupid idiot? Yeah, me too. That's why I spent a long time writing out these guided notes so you don't have to!
 
 Stop reading complicated docs and start reading well formatted, well-put together docs!
 - If you just stop being lazy and genuinely lock in you can learn most of the language with a little practice in like an hour. 😉
