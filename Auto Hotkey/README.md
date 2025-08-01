@@ -4,8 +4,6 @@ Do you want to stop being a stupid idiot? Yeah, me too. That's why I spent a lon
 Stop reading complicated docs and start reading well formatted, well-put together docs!
 - If you just stop being lazy and genuinely lock in you can learn most of the language with a little practice in like an hour. 😉
 
-"**Stupid people don't exist, they just didn't learn properly**" -Suno, 2025.
-
 ---
 
 > [!NOTE]
